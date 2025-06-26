@@ -12,9 +12,9 @@ export function StructuredData() {
         url: "https://aieradev.com",
         image: {
           "@type": "ImageObject",
-          url: "https://aieradev.com/profile-image.jpg",
-          width: 400,
-          height: 400,
+          url: "https://avatars.githubusercontent.com/u/80651195",
+          width: 460,
+          height: 460,
         },
         sameAs: [
           "https://github.com/aieradev",

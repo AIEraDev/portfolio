@@ -67,17 +67,17 @@ export const metadata: Metadata = {
       "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. 4+ years building intelligent digital solutions.",
     images: [
       {
+        url: "https://avatars.githubusercontent.com/u/80651195",
+        width: 460,
+        height: 460,
+        alt: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer Profile Photo",
+        type: "image/jpeg",
+      },
+      {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer Portfolio",
-        type: "image/jpeg",
-      },
-      {
-        url: "/profile-image.jpg",
-        width: 400,
-        height: 400,
-        alt: "Abdulkabir Musa - Professional Profile Photo",
         type: "image/jpeg",
       },
     ],
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     description:
       "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. Available for projects.",
-    images: ["/og-image.jpg"],
+    images: ["https://avatars.githubusercontent.com/u/80651195"],
   },
   verification: {
     google: "your-google-verification-code",

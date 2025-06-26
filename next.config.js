@@ -10,8 +10,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ["avatars.githubusercontent.com"],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
