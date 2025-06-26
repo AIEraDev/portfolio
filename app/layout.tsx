@@ -1,19 +1,18 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { StructuredData } from "./structured-data"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { StructuredData } from "./structured-data";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
     default: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     template: "%s | Abdulkabir Musa - AIEraDev",
   },
-  description:
-    "Abdulkabir Musa (AIEraDev) is a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions. Specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations including OpenAI API. Available for freelance projects and full-time opportunities.",
+  description: "Abdulkabir Musa (AIEraDev) is a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions. Specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations including OpenAI API. Available for freelance projects and full-time opportunities.",
   keywords: [
     "Abdulkabir Musa",
     "AIEraDev",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     "hire developer",
     "remote developer",
   ],
-  authors: [{ name: "Abdulkabir Musa", url: "https://aieradev.com" }],
+  authors: [{ name: "Abdulkabir Musa", url: "https://aieradev.vercel.app" }],
   creator: "Abdulkabir Musa (AIEraDev)",
   publisher: "AIEraDev",
   robots: {
@@ -60,11 +59,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aieradev.com",
+    url: "https://aieradev.vercel.app",
     siteName: "AIEraDev - Abdulkabir Musa Portfolio",
     title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
-    description:
-      "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. 4+ years building intelligent digital solutions.",
+    description: "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. 4+ years building intelligent digital solutions.",
     images: [
       {
         url: "https://avatars.githubusercontent.com/u/80651195",
@@ -87,8 +85,7 @@ export const metadata: Metadata = {
     site: "@aieradev",
     creator: "@aieradev",
     title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
-    description:
-      "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. Available for projects.",
+    description: "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. Available for projects.",
     images: ["https://avatars.githubusercontent.com/u/80651195"],
   },
   verification: {
@@ -97,10 +94,10 @@ export const metadata: Metadata = {
     yahoo: "your-yahoo-verification-code",
   },
   alternates: {
-    canonical: "https://aieradev.com",
+    canonical: "https://aieradev.vercel.app",
     languages: {
-      "en-US": "https://aieradev.com",
-      en: "https://aieradev.com",
+      "en-US": "https://aieradev.vercel.app",
+      en: "https://aieradev.vercel.app",
     },
   },
   category: "technology",
@@ -111,9 +108,9 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/profile-image.jpg", sizes: "16x16", type: "image/png" },
+      { url: "/profile-image.jpg", sizes: "32x32", type: "image/png" },
+      { url: "/profile-image.jpg", sizes: "96x96", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     other: [
@@ -136,13 +133,9 @@ export const metadata: Metadata = {
     "msapplication-starturl": "/",
     "msapplication-navbutton-color": "#3b82f6",
   },
-}
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -152,5 +145,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
