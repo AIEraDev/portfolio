@@ -3,33 +3,139 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { StructuredData } from "./structured-data"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer",
+  title: {
+    default: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
+    template: "%s | Abdulkabir Musa - AIEraDev",
+  },
   description:
-    "Personal portfolio of Abdulkabir Musa (AIEraDev), a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions.",
-  keywords: ["developer", "portfolio", "full-stack", "react", "next.js", "AI", "AIEraDev", "Abdulkabir Musa"],
-  authors: [{ name: "Abdulkabir Musa" }],
+    "Abdulkabir Musa (AIEraDev) is a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions. Specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations including OpenAI API. Available for freelance projects and full-time opportunities.",
+  keywords: [
+    "Abdulkabir Musa",
+    "AIEraDev",
+    "full-stack developer",
+    "React developer",
+    "Next.js expert",
+    "Express.js developer",
+    "Deno runtime",
+    "MongoDB developer",
+    "Prisma ORM",
+    "AI integration",
+    "OpenAI API",
+    "JavaScript developer",
+    "TypeScript developer",
+    "Node.js developer",
+    "web developer Nigeria",
+    "freelance developer",
+    "AI solutions",
+    "machine learning integration",
+    "modern web development",
+    "responsive web design",
+    "API development",
+    "database design",
+    "cloud deployment",
+    "Vercel deployment",
+    "portfolio website",
+    "hire developer",
+    "remote developer",
+  ],
+  authors: [{ name: "Abdulkabir Musa", url: "https://aieradev.com" }],
   creator: "Abdulkabir Musa (AIEraDev)",
+  publisher: "AIEraDev",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://aieradev.com",
-    title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer",
+    siteName: "AIEraDev - Abdulkabir Musa Portfolio",
+    title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     description:
-      "Personal portfolio of Abdulkabir Musa (AIEraDev), a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions.",
-    siteName: "AIEraDev Portfolio",
+      "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. 4+ years building intelligent digital solutions.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer Portfolio",
+        type: "image/jpeg",
+      },
+      {
+        url: "/profile-image.jpg",
+        width: 400,
+        height: 400,
+        alt: "Abdulkabir Musa - Professional Profile Photo",
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer",
-    description:
-      "Personal portfolio of Abdulkabir Musa (AIEraDev), a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions.",
+    site: "@aieradev",
     creator: "@aieradev",
+    title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
+    description:
+      "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. Available for projects.",
+    images: ["/og-image.jpg"],
   },
-    generator: 'v0.dev'
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
+  },
+  alternates: {
+    canonical: "https://aieradev.com",
+    languages: {
+      "en-US": "https://aieradev.com",
+      en: "https://aieradev.com",
+    },
+  },
+  category: "technology",
+  classification: "Portfolio Website",
+  referrer: "origin-when-cross-origin",
+  generator: "Next.js",
+  applicationName: "AIEraDev Portfolio",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#3b82f6",
+      },
+    ],
+  },
+  other: {
+    "msapplication-TileColor": "#3b82f6",
+    "theme-color": "#ffffff",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "AIEraDev",
+    "application-name": "AIEraDev Portfolio",
+    "msapplication-tooltip": "Abdulkabir Musa - Full-Stack Developer Portfolio",
+    "msapplication-starturl": "/",
+    "msapplication-navbutton-color": "#3b82f6",
+  },
 }
 
 export default function RootLayout({
@@ -41,6 +147,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <StructuredData />
           {children}
         </ThemeProvider>
       </body>

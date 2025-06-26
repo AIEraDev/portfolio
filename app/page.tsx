@@ -40,37 +40,47 @@ export default function Home() {
         <ThemeToggle />
       </div>
 
-      <main className="max-w-2xl mx-auto px-6 py-12">
+      <main className="max-w-2xl mx-auto px-6 py-12" role="main">
         {/* Hero Section */}
-        <section id="hero" className="text-center mb-20 animate-fade-in">
+        <section id="hero" className="text-center mb-20 animate-fade-in" itemScope itemType="https://schema.org/Person">
           <div className="mb-8">
             <div className="relative inline-block">
               <Image
                 src="/placeholder.svg?height=120&width=120"
-                alt="Profile"
+                alt="Abdulkabir Musa (AIEraDev) - Full-Stack Developer Profile Photo"
                 width={120}
                 height={120}
                 className="rounded-full mx-auto mb-6 ring-4 ring-gray-100 dark:ring-gray-800 hover:ring-blue-200 dark:hover:ring-blue-800 transition-all duration-300 hover:scale-105"
                 priority
+                itemProp="image"
               />
-              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 animate-pulse"></div>
+              <div
+                className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 animate-pulse"
+                title="Available for work"
+              ></div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+            <h1
+              className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+              itemProp="name"
+            >
               Abdulkabir Musa
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 animate-slide-up">
+            <p className="text-xl text-gray-600 dark:text-gray-300 animate-slide-up" itemProp="jobTitle">
               Full-stack developer crafting intelligent digital solutions
             </p>
+            <meta itemProp="alternateName" content="AIEraDev" />
+            <meta itemProp="email" content="abdulkabir@aieradev.com" />
+            <meta itemProp="url" content="https://aieradev.com" />
           </div>
         </section>
 
         {/* About Section */}
-        <section id="about" className="mb-20 animate-fade-in-delay">
+        <section id="about" className="mb-20 animate-fade-in-delay" itemScope itemType="https://schema.org/AboutPage">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 relative">
             About
             <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-600 dark:bg-blue-400"></div>
           </h2>
-          <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed" itemProp="about">
             <p className="hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-300">
               I'm Abdulkabir Musa, also known as AIEraDev, a passionate full-stack developer with 4+ years of experience
               building innovative web applications and AI-powered solutions. I specialize in React, Next.js, and
