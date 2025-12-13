@@ -1,46 +1,34 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { StructuredData } from "./structured-data";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aieradev.vercel.app"),
   title: {
     default: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     template: "%s | Abdulkabir Musa - AIEraDev",
   },
-  description: "Abdulkabir Musa (AIEraDev) is a passionate full-stack developer with 4+ years of experience crafting intelligent digital solutions. Specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations including OpenAI API. Available for freelance projects and full-time opportunities.",
+  description: "Abdulkabir Musa (AIEraDev) is an AI Platform Engineer and Full-Stack Developer specializing in context-aware systems, Next.js, and Python. Explore projects bridging ML models with production web apps.",
   keywords: [
     "Abdulkabir Musa",
     "AIEraDev",
-    "full-stack developer",
-    "React developer",
-    "Next.js expert",
-    "Express.js developer",
-    "Deno runtime",
-    "MongoDB developer",
-    "Prisma ORM",
-    "AI integration",
-    "OpenAI API",
-    "JavaScript developer",
-    "TypeScript developer",
-    "Node.js developer",
-    "web developer Nigeria",
-    "freelance developer",
-    "AI solutions",
-    "machine learning integration",
-    "modern web development",
-    "responsive web design",
-    "API development",
-    "database design",
-    "cloud deployment",
-    "Vercel deployment",
-    "portfolio website",
-    "hire developer",
-    "remote developer",
+    "AI Platform Engineer",
+    "Context-Aware AI Systems",
+    "MCP",
+    "Model Context Protocol",
+    "Full-Stack Developer Nigeria",
+    "Next.js Expert",
+    "Python Developer",
+    "React Developer",
+    "AI Integration",
+    "Machine Learning Engineer",
+    "Web Developer Portfolio",
+    "Software Engineer Africa",
   ],
   authors: [{ name: "Abdulkabir Musa", url: "https://aieradev.vercel.app" }],
   creator: "Abdulkabir Musa (AIEraDev)",
@@ -138,8 +126,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <body className={`${jetbrainsMono.className} bg-background text-foreground antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <StructuredData />
           {children}
         </ThemeProvider>

@@ -1,0 +1,6 @@
+I am an AI Platform Engineer and CEO of AIEraDev, building the infrastructure for the next era of intelligent web applications.
+My work bridges the gap between advanced Machine Learning and robust Full Stack engineering, utilizing Python, TypeScript, and Next.js.
+I specialize in "context-first" product design, creating systems like Phantom that leverage AI to solve complex, real-time challenges.
+Passionate about reliability, I advocate for code that outperforms human error, a philosophy I share through my writing and community leadership.
+I am actively driving AI education in Africa, empowering a new generation of developers to master AI-driven workflows and tools.
+Let's connect to explore how we can build forward-looking, problem-solving AI solutions that redefine user experiences.
