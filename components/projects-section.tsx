@@ -9,42 +9,7 @@ const projects = [
         tags: ["TypeScript", "Kiro", "Real-time", "WebSockets"],
         image: "/projects/phantom.jpg",
         repoUrl: "https://github.com/AIEraDev/phantom",
-        demoUrl: "https://phantom.aieradev.com",
-    },
-    {
-        title: "StayGoTransit",
-        description: "A robust full-stack transportation logistics app built with the MERN stack and TypeScript, ensuring type-safe reliability for complex scheduling.",
-        tags: ["React", "Node.js", "MongoDB", "TypeScript"],
-        image: "/projects/staygotransit.jpg",
-        repoUrl: "https://github.com/AIEraDev/staygotransit",
-    },
-    {
-        title: "Blossom-Blend",
-        description: "A dynamic e-commerce platform featuring seamless product management and optimized user flows, powered by a scalable MERN stack architecture.",
-        tags: ["MERN Stack", "Redux", "Stripe"],
-        image: "/projects/blossom.jpg",
-        repoUrl: "https://github.com/AIEraDev/blossom-blend",
-    },
-    {
-        title: "WorldWise",
-        description: "An interactive map tracking application that enables users to document their global travels with geospatial precision and rich media integration.",
-        tags: ["React", "Leaflet", "Geolocation"],
-        image: "/projects/worldwise.jpg",
-        repoUrl: "https://github.com/AIEraDev/worldwise",
-    },
-    {
-        title: "Natour",
-        description: "A travel booking system designed for immersive user experiences, streamlining the reservation process for global tours with a focus on usability.",
-        tags: ["Node.js", "MongoDB", "Pug"],
-        image: "/projects/natour.jpg",
-        repoUrl: "https://github.com/AIEraDev/natour",
-    },
-    {
-        title: "NovelNotion",
-        description: "A full-stack blogging platform that fosters community engagement through intuitive content creation tools and a responsive reading experience.",
-        tags: ["Next.js", "Tailwind CSS", "Prisma"],
-        image: "/projects/novelnotion.jpg",
-        repoUrl: "https://github.com/AIEraDev/novelnotion",
+        demoUrl: "https://kiroween-phantom.vercel.app/",
     },
 ];
 

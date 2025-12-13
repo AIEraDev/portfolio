@@ -2,6 +2,14 @@
 
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+
+const HERO_WORDS = [
+    "Context-Aware Intelligence",
+    "Architecting Intelligence",
+    "Scalable AI Solutions",
+    "Next-Gen Applications"
+];
 
 export function Hero() {
     return (
@@ -20,9 +28,9 @@ export function Hero() {
                     </span>
 
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6">
-                        Engineering <br />
+                        <span className="block mb-2">Engineering</span>
                         <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                            Context-Aware Intelligence
+                            <TypewriterEffect words={HERO_WORDS} />
                         </span>
                     </h1>
 
