@@ -1,0 +1,179 @@
+{
+    "meta": {
+        "name": "AI Era Dev Portfolio Design System",
+        "theme": "Deep Cosmos",
+        "version": "1.0.0"
+    },
+    "colors": {
+        "background": {
+            "default": "hsl(222, 47%, 11%)",
+            "paper": "hsl(217, 33%, 17%)",
+            "subtle": "hsl(215, 25%, 27%)"
+        },
+        "foreground": {
+            "default": "hsl(210, 40%, 98%)",
+            "muted": "hsl(215, 20%, 65%)",
+            "inverse": "hsl(222, 47%, 11%)"
+        },
+        "primary": {
+            "default": "hsl(190, 100%, 50%)",
+            "foreground": "hsl(222, 47%, 11%)",
+            "hover": "hsl(190, 100%, 60%)"
+        },
+        "secondary": {
+            "default": "hsl(265, 89%, 66%)",
+            "foreground": "hsl(210, 40%, 98%)",
+            "hover": "hsl(265, 89%, 76%)"
+        },
+        "accent": {
+            "cyan": "hsl(180, 100%, 50%)",
+            "magenta": "hsl(300, 100%, 50%)",
+            "green": "hsl(120, 100%, 50%)"
+        },
+        "border": "hsl(217, 33%, 25%)",
+        "input": "hsl(217, 33%, 20%)",
+        "ring": "hsl(190, 100%, 50%)"
+    },
+    "typography": {
+        "fontFamily": {
+            "sans": [
+                "Inter",
+                "system-ui",
+                "sans-serif"
+            ],
+            "heading": [
+                "Outfit",
+                "Inter",
+                "sans-serif"
+            ],
+            "mono": [
+                "JetBrains Mono",
+                "monospace"
+            ]
+        },
+        "scale": {
+            "xs": {
+                "fontSize": "0.75rem",
+                "lineHeight": "1rem"
+            },
+            "sm": {
+                "fontSize": "0.875rem",
+                "lineHeight": "1.25rem"
+            },
+            "base": {
+                "fontSize": "1rem",
+                "lineHeight": "1.5rem"
+            },
+            "lg": {
+                "fontSize": "1.125rem",
+                "lineHeight": "1.75rem"
+            },
+            "xl": {
+                "fontSize": "1.25rem",
+                "lineHeight": "1.75rem"
+            },
+            "2xl": {
+                "fontSize": "1.5rem",
+                "lineHeight": "2rem"
+            },
+            "3xl": {
+                "fontSize": "1.875rem",
+                "lineHeight": "2.25rem"
+            },
+            "4xl": {
+                "fontSize": "2.25rem",
+                "lineHeight": "2.5rem"
+            },
+            "5xl": {
+                "fontSize": "3rem",
+                "lineHeight": "1"
+            },
+            "6xl": {
+                "fontSize": "3.75rem",
+                "lineHeight": "1"
+            }
+        },
+        "weights": {
+            "regular": 400,
+            "medium": 500,
+            "semibold": 600,
+            "bold": 700
+        }
+    },
+    "layout": {
+        "breakpoints": {
+            "sm": "640px",
+            "md": "768px",
+            "lg": "1024px",
+            "xl": "1280px",
+            "2xl": "1536px"
+        },
+        "container": {
+            "padding": "2rem",
+            "maxWidth": "1400px",
+            "center": true
+        },
+        "spacing": {
+            "4": "1rem",
+            "8": "2rem",
+            "12": "3rem",
+            "16": "4rem",
+            "24": "6rem",
+            "32": "8rem"
+        },
+        "borderRadius": {
+            "sm": "0.25rem",
+            "md": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+        }
+    },
+    "components": {
+        "Hero": {
+            "minHeight": "80vh",
+            "alignment": "center",
+            "elements": {
+                "headline": {
+                    "size": "5xl",
+                    "weight": "bold",
+                    "gradient": "linear-gradient(to right, #00FFFF, #A020F0)"
+                },
+                "subhead": {
+                    "size": "xl",
+                    "color": "foreground.muted"
+                },
+                "cta": {
+                    "variant": "primary",
+                    "size": "lg"
+                }
+            }
+        },
+        "ProjectCard": {
+            "background": "background.paper",
+            "border": "1px solid border",
+            "hover": {
+                "transform": "translateY(-4px)",
+                "shadow": "0 10px 30px -10px rgba(0, 255, 255, 0.2)"
+            },
+            "imageAspectRatio": "16/9"
+        },
+        "Skills": {
+            "layout": "flex-wrap",
+            "gap": "0.5rem",
+            "chip": {
+                "background": "background.subtle",
+                "color": "foreground.default",
+                "radius": "full",
+                "padding": "0.25rem 0.75rem"
+            }
+        },
+        "Contact": {
+            "layout": "centered",
+            "form": {
+                "maxWidth": "500px",
+                "inputBackground": "background.subtle"
+            }
+        }
+    }
+}
