@@ -1,10 +1,6 @@
-import { Linkedin, Mail, Twitter, Instagram, Facebook, Youtube, Github, BookOpen, Share2, X } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { Linkedin, Mail, Twitter, Instagram, Facebook, Youtube, Github, BookOpen } from "lucide-react";
 
 export function Socials() {
-    const [isOpen, setIsOpen] = useState(false);
-
     const socials = [
         { icon: Github, href: "https://github.com/aieradev", label: "GitHub" },
         { icon: Twitter, href: "https://x.com/AIEraDev", label: "X (Twitter)" },
@@ -17,54 +13,21 @@ export function Socials() {
     ];
 
     return (
-        <>
-            {/* Desktop View */}
-            <div className="hidden md:flex fixed top-6 right-6 z-50 items-center gap-4 bg-background/80 backdrop-blur-sm p-2 rounded-full border border-border/50 shadow-sm">
+        <div className="w-full overflow-x-auto">
+            <div className="ml-auto flex w-max items-center gap-1 rounded-full border border-border/60 bg-background/70 px-2 py-1 backdrop-blur-sm md:gap-2 md:px-3 md:py-2">
                 {socials.map((social) => (
                     <a
                         key={social.label}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-accent transition-colors p-2 hover:bg-muted/50 rounded-full"
+                        className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted/40 hover:text-accent"
                         aria-label={social.label}
                     >
-                        <social.icon className="w-5 h-5" />
+                        <social.icon className="h-4 w-4 md:h-5 md:w-5" />
                     </a>
                 ))}
             </div>
-
-            {/* Mobile View */}
-            <div className="md:hidden fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
-                {isOpen && (
-                    <div className="flex flex-col gap-2 mb-2 animate-in slide-in-from-bottom-4 fade-in duration-200">
-                        {socials.map((social) => (
-                            <a
-                                key={social.label}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-background/80 backdrop-blur-sm p-3 rounded-full border border-border/50 shadow-sm text-muted-foreground hover:text-accent transition-colors hover:bg-muted/50"
-                                aria-label={social.label}
-                            >
-                                <social.icon className="w-5 h-5" />
-                            </a>
-                        ))}
-                    </div>
-                )}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className={cn(
-                        "p-4 rounded-full shadow-lg transition-all duration-300 border border-border/50 backdrop-blur-sm",
-                        isOpen
-                            ? "bg-destructive text-destructive-foreground rotate-90"
-                            : "bg-primary text-primary-foreground hover:scale-110"
-                    )}
-                    aria-label="Toggle social links"
-                >
-                    {isOpen ? <X className="w-6 h-6" /> : <Share2 className="w-6 h-6" />}
-                </button>
-            </div>
-        </>
+        </div>
     );
 }

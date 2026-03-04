@@ -27,15 +27,14 @@ export function Hero() {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter break-words">
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tighter break-words leading-tight">
           <span className="text-foreground">Architecting </span>
-          <WordRotate words={HERO_WORDS} className="text-accent inline-flex min-w-[200px] md:min-w-[300px]" />
+          <WordRotate words={HERO_WORDS} className="text-accent inline-flex min-w-[160px] md:min-w-[300px]" />
         </h1>
 
         <div className={`transition-all duration-1000 ease-out ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
             AI Platform Engineer | Context-first product thinker.
-            <br />I design prompts & systems where AI generates the code.
           </p>
 
           <div className="flex flex-wrap gap-6 pt-8">

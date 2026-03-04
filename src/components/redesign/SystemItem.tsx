@@ -22,7 +22,7 @@ export function SystemItem({ name, description, techStack, url, repoUrl, problem
         <div className="border-b border-border last:border-0">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full py-8 flex items-start justify-between group text-left hover:bg-muted/5 transition-colors px-4 -mx-4 rounded-lg"
+                className="w-full py-6 md:py-8 flex items-start justify-between group text-left hover:bg-muted/5 transition-colors px-3 md:px-4 -mx-3 md:-mx-4 rounded-lg"
             >
                 <div className="space-y-2">
                     <div className="flex items-center gap-3">
@@ -32,11 +32,11 @@ export function SystemItem({ name, description, techStack, url, repoUrl, problem
                                 isOpen && "rotate-90 text-accent"
                             )}
                         />
-                        <h3 className="text-2xl font-semibold group-hover:text-accent transition-colors">
+                        <h3 className="text-xl md:text-2xl font-semibold group-hover:text-accent transition-colors">
                             {name}
                         </h3>
                     </div>
-                    <p className="text-muted-foreground pl-8">{description}</p>
+                    <p className="text-muted-foreground pl-7 md:pl-8 text-sm md:text-base">{description}</p>
                 </div>
 
                 <div className="hidden md:flex flex-wrap gap-1 max-w-xs justify-end pl-8">
@@ -53,12 +53,12 @@ export function SystemItem({ name, description, techStack, url, repoUrl, problem
 
             <div
                 className={cn(
-                    "grid transition-all duration-300 ease-in-out pl-8 pr-4",
+                    "grid transition-all duration-300 ease-in-out pl-7 md:pl-8 pr-0 md:pr-4",
                     isOpen ? "grid-rows-[1fr] opacity-100 pb-8" : "grid-rows-[0fr] opacity-0"
                 )}
             >
                 <div className="overflow-hidden">
-                    <div className="grid md:grid-cols-3 gap-8 py-4 text-sm">
+                    <div className="grid md:grid-cols-3 gap-6 md:gap-8 py-4 text-sm">
                         <div className="space-y-2">
                             <span className="text-accent font-mono text-xs uppercase tracking-wider">Problem</span>
                             <p className="text-muted-foreground leading-relaxed">{problem}</p>
@@ -73,7 +73,7 @@ export function SystemItem({ name, description, techStack, url, repoUrl, problem
                         </div>
                     </div>
 
-                    <div className="flex gap-6 pt-4">
+                    <div className="flex flex-wrap gap-4 md:gap-6 pt-4">
                         {url && (
                             <a
                                 href={url}

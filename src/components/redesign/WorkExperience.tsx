@@ -2,6 +2,17 @@ import { ArrowRight } from "lucide-react";
 
 const EXPERIENCES = [
     {
+        company: "Briify",
+        location: "Global · Remote",
+        roles: [
+            {
+                title: "Founder",
+                period: "Jan 2026 - Present",
+                description: "Leading product vision, design direction, and engineering execution for Briify, with a focus on building practical, high-quality web experiences."
+            }
+        ]
+    },
+    {
         company: "Sizemug",
         location: "United Kingdom · Remote",
         roles: [
