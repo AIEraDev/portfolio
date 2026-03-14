@@ -20,7 +20,7 @@ export function Hero() {
     <section className="min-h-[80vh] flex flex-col justify-center max-w-6xl mx-auto px-6 py-24">
       <div className="space-y-8">
         <div className="flex items-center gap-4 mb-4">
-          <img src="/profile-image.jpg" alt="Abdulkabir Musa" className="w-16 h-16 rounded-full border-2 border-accent/50 object-cover" />
+          <img src="https://avatars.githubusercontent.com/u/80651195" alt="Abdulkabir Musa" className="w-16 h-16 rounded-full border-2 border-accent/50 object-cover" />
           <div>
             <h2 className="text-xl font-semibold tracking-tight">Abdulkabir Musa</h2>
             <p className="text-muted-foreground text-sm">@AIEraDev</p>

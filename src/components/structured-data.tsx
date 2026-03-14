@@ -13,7 +13,7 @@ export function StructuredData() {
         url: "https://abdulkabirmusa.com",
         image: {
           "@type": "ImageObject",
-          url: "https://abdulkabirmusa.com/profile-image.jpg",
+          url: "https://avatars.githubusercontent.com/u/80651195",
           width: 460,
           height: 460,
         },
