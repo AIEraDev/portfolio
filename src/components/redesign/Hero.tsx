@@ -33,16 +33,14 @@ export function Hero() {
         </h1>
 
         <div className={`transition-all duration-1000 ease-out ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            AI Platform Engineer | Context-first product thinker.
-          </p>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">AI Platform Engineer | Context-first product thinker.</p>
 
           <div className="flex flex-wrap gap-6 pt-8">
             <a href="#systems" className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors">
               View Systems
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="https://docs.google.com/document/d/1W8DyAUkFgglMaVJpAkiwvV7Hv70g1hQk/edit?usp=sharing&ouid=117658817195795708598&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors">
+            <a href="https://docs.google.com/document/d/18VegQPRpbK6-5ZMowligAoTUrOnM_hZm/edit?usp=sharing&ouid=117658817195795708598&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors">
               Resume
               <FileText className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
             </a>
