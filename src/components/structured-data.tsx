@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export function StructuredData() {
   const structuredData = {
@@ -13,7 +13,7 @@ export function StructuredData() {
         url: "https://abdulkabirmusa.com",
         image: {
           "@type": "ImageObject",
-          url: "https://avatars.githubusercontent.com/u/80651195",
+          url: "https://abdulkabirmusa.com/profile-image.jpg",
           width: 460,
           height: 460,
         },
