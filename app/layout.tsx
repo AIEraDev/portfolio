@@ -97,9 +97,10 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   icons: {
     icon: [
-      { url: "/profile-image.jpg", sizes: "16x16", type: "image/png" },
-      { url: "/profile-image.jpg", sizes: "32x32", type: "image/png" },
-      { url: "/profile-image.jpg", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/profile-image.jpg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/profile-image.jpg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/profile-image.jpg", sizes: "96x96", type: "image/jpeg" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     other: [
