@@ -1,52 +1,106 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+function WordRotator({ words, className, duration = 2500 }: { words: string[]; className?: string; duration?: number }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, duration);
+    return () => clearInterval(interval);
+  }, [words, duration]);
+
+  return (
+    <span className={cn("inline-grid grid-cols-1 text-left", className)}>
+      {words.map((word, i) => (
+        <span
+          key={word}
+          className={cn(
+            "col-start-1 row-start-1 transition-all duration-700 ease-in-out whitespace-nowrap",
+            i === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none absolute"
+          )}
+        >
+          {word}
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export function Hero() {
-    const [text, setText] = useState("");
-    const fullText = "Architecting Intelligence.";
+  const [showContent, setShowContent] = useState(false);
+  const words = ["AI", "System Design", "Intelligence", "Scalability"];
 
-    useEffect(() => {
-        let i = 0;
-        const interval = setInterval(() => {
-            setText(fullText.slice(0, i + 1));
-            i++;
-            if (i > fullText.length) clearInterval(interval);
-        }, 100);
-        return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return (
-        <section className="min-h-[80vh] flex flex-col justify-center max-w-4xl mx-auto px-6 py-24">
-            <div className="space-y-8">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">
-                    {text}
-                    <span className="animate-pulse text-accent">_</span>
-                </h1>
+  return (
+    <section className="min-h-[80vh] flex flex-col justify-center max-w-6xl mx-auto px-6 py-24">
+      <div className="space-y-8">
+        <div className="flex items-center gap-4 mb-4">
+          <img
+            src="https://avatars.githubusercontent.com/u/80651195"
+            alt="Abdulkabir Musa"
+            className="w-16 h-16 rounded-full border-2 border-accent/50 object-cover"
+          />
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight">Abdulkabir Musa</h2>
+            <p className="text-muted-foreground text-sm">@AIEraDev</p>
+          </div>
+        </div>
 
-                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                    AI Platform Engineer | Context-first product thinker.
-                    <br />
-                    I design prompts & systems where AI generates the code.
-                </p>
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tighter break-words leading-tight">
+          <span className="text-foreground">Architecting </span>
+          <WordRotator
+            words={words}
+            className="text-accent inline-flex min-w-[160px] md:min-w-[300px]"
+          />
+        </h1>
 
-                <div className="flex flex-wrap gap-6 pt-8">
-                    <a
-                        href="#systems"
-                        className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
-                    >
-                        View Systems
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a
-                        href="#contact"
-                        className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        Contact
-                    </a>
-                </div>
-            </div>
-        </section>
-    );
+        <div
+          className={cn(
+            "transition-all duration-1000 ease-out",
+            showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          )}
+        >
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+            AI Platform Engineer | Context-first product thinker.
+          </p>
+
+          <div className="flex flex-wrap gap-6 pt-8">
+            <a
+              href="#systems"
+              className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
+            >
+              View Systems
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="https://docs.google.com/document/d/18VegQPRpbK6-5ZMowligAoTUrOnM_hZm/edit?usp=sharing&ouid=117658817195795708598&rtpof=true&sd=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
+            >
+              Resume
+              <ExternalLink className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+            </a>
+            <a
+              href="#contact"
+              className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

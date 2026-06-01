@@ -17,6 +17,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        sans: ["var(--font-sans)", "Sora", "Inter", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
       },
       colors: {

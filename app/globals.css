@@ -4,31 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    --background: 0 0% 0%;
+    /* Pure Black OLED by default */
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 156 66% 52%;
+    /* Emerald Mint Green Accent */
+    --accent-foreground: 144 100% 10%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    /* #0a0a0a */
+    --background: 0 0% 0%;
+    /* Pure Black OLED */
     --foreground: 0 0% 98%;
     /* #fafafa */
     --card: 0 0% 3.9%;
@@ -41,8 +43,8 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 142 70% 50%;
-    /* Terminal Green Accent */
+    --accent: 156 66% 52%;
+    /* Emerald Mint Green Accent */
     --accent-foreground: 144 100% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -58,7 +60,13 @@
   }
 
   body {
-    @apply bg-background text-foreground font-mono antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+                      radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.12), transparent 35%),
+                      radial-gradient(circle at 95% 10%, rgba(40, 180, 132, 0.12), transparent 30%);
+    background-size: 72px 72px, 72px 72px, 100% 100%, 100% 100%;
+    background-attachment: fixed;
   }
 
   h1,
@@ -78,5 +86,51 @@
 
   .reveal-visible {
     @apply opacity-100 translate-y-0;
+  }
+
+  .grid-shell {
+    position: relative;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .grid-shell:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .section-rule {
+    border-bottom-width: 1px;
+    border-style: dashed;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .label-mono {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    --tw-text-opacity: 1;
+    color: rgb(113 113 122 / var(--tw-text-opacity));
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  @media (max-width: 768px) {
+    .grid-shell {
+      border-left-width: 0px;
+      border-right-width: 0px;
+    }
+    .label-mono {
+      letter-spacing: 0.16em;
+    }
   }
 }

@@ -1,14 +1,15 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { StructuredData } from "./structured-data";
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+const sora = Sora({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], variable: "--font-sans" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aieradev.vercel.app"),
+  metadataBase: new URL("https://abdulkabirmusa.com"),
   title: {
     default: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     template: "%s | Abdulkabir Musa - AIEraDev",
@@ -125,9 +126,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${jetbrainsMono.className} bg-background text-foreground antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+    <html lang="en" suppressHydrationWarning className={`${sora.variable} ${jetbrainsMono.variable}`}>
+      <body className="bg-background text-foreground antialiased">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <StructuredData />
           {children}
         </ThemeProvider>
