@@ -1,7 +1,7 @@
 {
   "name": "Abdulkabir Musa (AIEraDev) - Full-Stack Developer Portfolio",
   "short_name": "AIEraDev",
-  "description": "Full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations",
+  "description": "Full-stack developer specializing in React, Next.js, Express.js, fastAPI, Tauri, Deno, MongoDB, Prisma ORM, and AI integrations",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

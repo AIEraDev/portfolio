@@ -61,11 +61,11 @@ export const metadata: Metadata = {
         type: "image/jpeg",
       },
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer Portfolio",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     creator: "@aieradev",
     title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     description: "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. Available for projects.",
-    images: ["https://avatars.githubusercontent.com/u/80651195"],
+    images: ["/og-image.png"],
   },
   verification: {
     google: "your-google-verification-code",
