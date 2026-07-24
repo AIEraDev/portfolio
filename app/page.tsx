@@ -10,6 +10,19 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   const projects = [
     {
+      name: "Ithqan",
+      description: "Local-first cross-platform desktop Quran review companion.",
+      techStack: ["Tauri v2", "React 19", "Rust", "SQLite", "TypeScript", "Tailwind CSS"],
+      url: "https://abdulkabirmusa.com/ithqan/",
+      repoUrl: "https://github.com/AIEraDev/Ithqan",
+      problem:
+        "Huffaz and Quran students lack a dedicated, low-friction desktop workflow for structured audio repetition and retention tracking.",
+      approach:
+        "Engineered a native cross-platform application using Tauri v2, Rust, React, and SQLite to manage audio repetition, retention heatmaps, and offline EveryAyah audio caching across macOS, Windows, and Linux.",
+      outcome:
+        "Delivered a fast, zero-cloud desktop companion with atomic audio caching, double-buffered playback, and automated review decay scheduling.",
+    },
+    {
       name: "Clypra",
       description: "Open-source, privacy-first desktop video editor.",
       techStack: ["Tauri", "React", "TypeScript", "FFmpeg", "Rust"],

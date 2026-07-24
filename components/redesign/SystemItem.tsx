@@ -94,12 +94,12 @@ export function SystemItem({
             {url && (
               <a
                 href={url}
-                target="_blank"
+                target={url.startsWith("/") || url.includes("abdulkabirmusa.com") ? "_self" : "_blank"}
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors"
               >
                 <ExternalLink className="w-4 h-4" />
-                Live Deployment
+                {url.includes("/ithqan") ? "View Case Study & Downloads" : "Live Deployment"}
               </a>
             )}
             {repoUrl && (
