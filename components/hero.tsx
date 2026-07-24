@@ -47,15 +47,6 @@ export function Hero() {
                             View Projects
                             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
-
-                        <Link
-                            href="/resume.pdf"
-                            target="_blank"
-                            className="btn-secondary flex items-center group"
-                        >
-                            Download Resume
-                            <Download className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-                        </Link>
                     </div>
                 </div>
             </div>
