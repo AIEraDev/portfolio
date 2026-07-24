@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 function WordRotator({ words, className, duration = 2500 }: { words: string[]; className?: string; duration?: number }) {
@@ -82,6 +82,15 @@ export function Hero() {
             >
               View Systems
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="https://docs.google.com/document/d/18VegQPRpbK6-5ZMowligAoTUrOnM_hZm/edit?usp=sharing&ouid=117658817195795708598&rtpof=true&sd=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
+            >
+              Resume
+              <ExternalLink className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
             </a>
             <a
               href="#contact"
