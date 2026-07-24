@@ -1,3 +1,4 @@
+import { DownloadTracker } from "@/components/ithqan/download-tracker";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,29 +43,6 @@ export const metadata: Metadata = {
 };
 
 const stack = ["Tauri v2", "React 19", "TypeScript", "Rust", "SQLite", "Zustand", "Tailwind CSS"];
-
-const downloads = [
-  {
-    platform: "macOS Apple Silicon",
-    detail: "M1/M2/M3/M4 DMG",
-    href: "https://github.com/AIEraDev/Ithqan/releases/download/v0.1.0/Ithqan_v0.1.0_macos_aarch64.dmg",
-  },
-  {
-    platform: "macOS Intel",
-    detail: "x64 DMG",
-    href: "https://github.com/AIEraDev/Ithqan/releases/download/v0.1.0/Ithqan_v0.1.0_macos_x64.dmg",
-  },
-  {
-    platform: "Windows",
-    detail: "x64 MSI installer",
-    href: "https://github.com/AIEraDev/Ithqan/releases/download/v0.1.0/Ithqan_v0.1.0_windows_x64.msi",
-  },
-  {
-    platform: "Linux",
-    detail: "x86_64 AppImage",
-    href: "https://github.com/AIEraDev/Ithqan/releases/download/v0.1.0/Ithqan_v0.1.0_linux_x86_64.AppImage",
-  },
-];
 
 const metrics = [
   { value: "604", label: "Quran pages tracked" },
@@ -232,7 +210,7 @@ export default function IthqanPage() {
                     View Source
                   </a>
                   <a
-                    href="https://github.com/AIEraDev/Ithqan/releases/download/v0.1.0/Ithqan_v0.1.0_macos_aarch64.dmg"
+                    href="/api/ithqan/download?platform=mac-arm64"
                     className="inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent/80"
                   >
                     <Download className="h-4 w-4" />
@@ -272,40 +250,7 @@ export default function IthqanPage() {
 
           <section className="section-rule px-5 py-12 md:px-8">
             <div className="mx-auto max-w-6xl">
-              <div className="flex flex-col gap-6 rounded-lg border border-accent/20 bg-accent/5 p-5 md:flex-row md:items-center md:justify-between md:p-6">
-                <div>
-                  <p className="label-mono mb-2">Direct Download</p>
-                  <h2 className="text-2xl font-semibold">Install Ithqan v0.1.0</h2>
-                  <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-                    Signed release assets are published from the GitHub Actions build pipeline.
-                  </p>
-                </div>
-                <a
-                  href="https://github.com/AIEraDev/Ithqan/releases/tag/v0.1.0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 rounded-full border border-border/80 px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-accent/50 hover:text-accent"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  All Assets
-                </a>
-              </div>
-
-              <div className="mt-4 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-4">
-                {downloads.map((download) => (
-                  <a
-                    key={download.platform}
-                    href={download.href}
-                    className="group bg-background/95 p-5 transition-colors hover:bg-accent/10"
-                  >
-                    <Download className="mb-4 h-5 w-5 text-accent" />
-                    <h3 className="font-semibold transition-colors group-hover:text-accent">
-                      {download.platform}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{download.detail}</p>
-                  </a>
-                ))}
-              </div>
+              <DownloadTracker />
             </div>
           </section>
 
