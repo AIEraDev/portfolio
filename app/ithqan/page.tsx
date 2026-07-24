@@ -20,9 +20,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ithqan - Cross-Platform Desktop Quran Review Companion (macOS, Windows, Linux)",
+  title: "Ithqan — Local-First Quran Review App for Desktop",
   description:
-    "Ithqan is a local-first cross-platform desktop application for macOS, Windows, and Linux for Quran review, audio repetition, retention heatmaps, bookmarks, and offline recitation playback.",
+    "Free local-first desktop app for Quran muraja'ah: repeat by ayah or page, track retention heatmaps, play offline. macOS, Windows, Linux.",
   keywords: [
     "Ithqan",
     "Quran review app",
@@ -71,12 +71,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Ithqan",
-  operatingSystem: "macOS, Windows, Linux",
   applicationCategory: "EducationalApplication",
+  operatingSystem: "macOS, Windows, Linux",
   description:
-    "Cross-platform desktop Quran review companion for audio repetition, retention heatmaps, bookmarks, and offline recitation playback.",
-  downloadUrl: "https://github.com/AIEraDev/Ithqan/releases",
+    "A local-first cross-platform desktop application for Quran muraja'ah — structured audio repetition by ayah, page, or surah, with retention heatmaps, bookmarks, and offline reciter audio caching.",
   softwareVersion: "0.1.0",
+  url: "https://abdulkabirmusa.com/ithqan/",
+  downloadUrl: "https://github.com/AIEraDev/Ithqan/releases",
   offers: {
     "@type": "Offer",
     price: "0",
@@ -85,8 +86,9 @@ const jsonLd = {
   author: {
     "@type": "Person",
     name: "Abdulkabir Musa",
-    url: "https://abdulkabirmusa.com",
+    url: "https://abdulkabirmusa.com/",
   },
+  sameAs: "https://github.com/AIEraDev/Ithqan",
 };
 
 const stack = ["Tauri v2", "React 19", "TypeScript", "Rust", "SQLite", "Zustand", "Tailwind CSS"];
