@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Web Developer Portfolio",
     "Software Engineer Africa",
   ],
-  authors: [{ name: "Abdulkabir Musa", url: "https://aieradev.vercel.app" }],
+  authors: [{ name: "Abdulkabir Musa", url: "https://abdulkabirmusa.com" }],
   creator: "Abdulkabir Musa (AIEraDev)",
   publisher: "AIEraDev",
   robots: {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aieradev.vercel.app",
+    url: "https://abdulkabirmusa.com",
     siteName: "AIEraDev - Abdulkabir Musa Portfolio",
     title: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
     description: "Experienced full-stack developer specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations. 4+ years building intelligent digital solutions.",
@@ -83,10 +83,10 @@ export const metadata: Metadata = {
     yahoo: "your-yahoo-verification-code",
   },
   alternates: {
-    canonical: "https://aieradev.vercel.app",
+    canonical: "https://abdulkabirmusa.com",
     languages: {
-      "en-US": "https://aieradev.vercel.app",
-      en: "https://aieradev.vercel.app",
+      "en-US": "https://abdulkabirmusa.com",
+      en: "https://abdulkabirmusa.com",
     },
   },
   category: "technology",

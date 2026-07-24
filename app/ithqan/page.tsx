@@ -20,25 +20,72 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ithqan - Desktop Quran Review Companion",
+  title: "Ithqan - Cross-Platform Desktop Quran Review Companion (macOS, Windows, Linux)",
   description:
-    "A portfolio case study for Ithqan, a local-first Tauri desktop app for Quran review, audio repetition, retention heatmaps, bookmarks, and offline playback.",
+    "Ithqan is a local-first cross-platform desktop application for macOS, Windows, and Linux for Quran review, audio repetition, retention heatmaps, bookmarks, and offline recitation playback.",
+  keywords: [
+    "Ithqan",
+    "Quran review app",
+    "Quran desktop app",
+    "Quran memorization tool",
+    "Muraja'ah app",
+    "EveryAyah audio looper",
+    "Quran retention heatmap",
+    "Tauri Quran app",
+    "macOS Quran app",
+    "Windows Quran app",
+    "Linux Quran app",
+    "Abdulkabir Musa",
+  ],
   alternates: {
-    canonical: "https://aieradev.vercel.app/ithqan",
+    canonical: "https://abdulkabirmusa.com/ithqan/",
   },
   openGraph: {
-    title: "Ithqan - Desktop Quran Review Companion",
+    title: "Ithqan - Cross-Platform Desktop Quran Review Companion",
     description:
-      "A local-first macOS menu bar app built with Tauri, React, Rust, SQLite, and Tailwind CSS for structured Quran review.",
-    url: "https://aieradev.vercel.app/ithqan",
+      "A local-first cross-platform desktop application for macOS, Windows, and Linux built with Tauri v2, React, Rust, SQLite, and Tailwind CSS for structured Quran review.",
+    url: "https://abdulkabirmusa.com/ithqan/",
+    siteName: "Abdulkabir Musa Portfolio",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: "/projects/ithqan/looper-tab.jpg",
+        url: "https://abdulkabirmusa.com/projects/ithqan/looper-tab.jpg",
         width: 1200,
         height: 900,
-        alt: "Ithqan audio looper interface",
+        alt: "Ithqan Cross-Platform Desktop Quran Review Companion Interface",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ithqan - Cross-Platform Desktop Quran Review Companion",
+    description:
+      "Structured Quran repetition, retention heatmaps, and offline reciter audio caching for macOS, Windows & Linux.",
+    creator: "@aieradev",
+    images: ["https://abdulkabirmusa.com/projects/ithqan/looper-tab.jpg"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Ithqan",
+  operatingSystem: "macOS, Windows, Linux",
+  applicationCategory: "EducationalApplication",
+  description:
+    "Cross-platform desktop Quran review companion for audio repetition, retention heatmaps, bookmarks, and offline recitation playback.",
+  downloadUrl: "https://github.com/AIEraDev/Ithqan/releases",
+  softwareVersion: "0.1.0",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  author: {
+    "@type": "Person",
+    name: "Abdulkabir Musa",
+    url: "https://abdulkabirmusa.com",
   },
 };
 
@@ -125,7 +172,7 @@ const architecture = [
   {
     icon: Layers3,
     title: "React popover UI",
-    detail: "Compact tabbed interface tuned for macOS menu bar usage rather than a full browser-style app.",
+    detail: "Compact tabbed interface tuned for native desktop menu bar & system tray usage across macOS, Windows, and Linux.",
   },
   {
     icon: Gauge,
@@ -157,6 +204,10 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function IthqanPage() {
   return (
     <main className="min-h-screen text-foreground selection:bg-accent/20 selection:text-accent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid-shell">
           <header className="section-rule px-5 py-4 md:px-8 md:py-6">
@@ -175,7 +226,7 @@ export default function IthqanPage() {
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                     <Sparkles className="h-3.5 w-3.5" />
-                    Desktop Quran Review Companion
+                    Cross-Platform Desktop Quran Review Companion
                   </span>
                   <span className="label-mono">Case Study</span>
                 </div>
@@ -183,7 +234,7 @@ export default function IthqanPage() {
                 <div className="space-y-5">
                   <h1 className="text-5xl font-bold tracking-tight md:text-7xl">Ithqan</h1>
                   <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
-                    A local-first menu bar app for Huffaz and Quran students to structure repetition,
+                    A local-first cross-platform desktop companion (macOS, Windows, Linux) for Huffaz and Quran students to structure repetition,
                     track retention, and keep review sessions moving without desktop friction.
                   </p>
                 </div>
@@ -210,11 +261,11 @@ export default function IthqanPage() {
                     View Source
                   </a>
                   <a
-                    href="/api/ithqan/download?platform=mac-arm64"
+                    href="#download"
                     className="inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent/80"
                   >
                     <Download className="h-4 w-4" />
-                    Download for Mac
+                    Download Desktop App
                   </a>
                   <a
                     href="#interface"
@@ -248,7 +299,7 @@ export default function IthqanPage() {
             </div>
           </section>
 
-          <section className="section-rule px-5 py-12 md:px-8">
+          <section id="download" className="section-rule px-5 py-12 md:px-8">
             <div className="mx-auto max-w-6xl">
               <DownloadTracker />
             </div>
@@ -348,7 +399,7 @@ export default function IthqanPage() {
                   <p className="text-lg leading-8 text-muted-foreground">
                     Ithqan uses Tauri for the desktop boundary, React for the popover interface,
                     Zustand for queue and player state, Rust-backed SQLite for review data, and
-                    EveryAyah audio caching for low-friction offline playback.
+                    EveryAyah audio caching for low-friction offline playback across macOS, Windows, and Linux.
                   </p>
                 </div>
                 <div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">

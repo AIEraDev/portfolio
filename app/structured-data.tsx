@@ -4,11 +4,11 @@ export function StructuredData() {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://aieradev.vercel.app/#person",
+        "@id": "https://abdulkabirmusa.com/#person",
         name: "Abdulkabir Musa",
         alternateName: "AIEraDev",
         description: "Full-stack developer with 4+ years of experience specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations",
-        url: "https://aieradev.vercel.app",
+        url: "https://abdulkabirmusa.com",
         image: {
           "@type": "ImageObject",
           url: "https://avatars.githubusercontent.com/u/80651195",
@@ -31,34 +31,34 @@ export function StructuredData() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://aieradev.vercel.app/#website",
-        url: "https://aieradev.vercel.app",
+        "@id": "https://abdulkabirmusa.com/#website",
+        url: "https://abdulkabirmusa.com",
         name: "AIEraDev - Abdulkabir Musa Portfolio",
         description: "Professional portfolio of Abdulkabir Musa, a full-stack developer specializing in modern web technologies and AI integrations",
         publisher: {
-          "@id": "https://aieradev.vercel.app/#person",
+          "@id": "https://abdulkabirmusa.com/#person",
         },
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://aieradev.vercel.app/?s={search_term_string}",
+          target: "https://abdulkabirmusa.com/?s={search_term_string}",
           "query-input": "required name=search_term_string",
         },
         inLanguage: "en-US",
       },
       {
         "@type": "WebPage",
-        "@id": "https://aieradev.vercel.app/#webpage",
-        url: "https://aieradev.vercel.app",
+        "@id": "https://abdulkabirmusa.com/#webpage",
+        url: "https://abdulkabirmusa.com",
         name: "Abdulkabir Musa (AIEraDev) - Full-Stack Developer & AI Solutions Expert",
         description: "Experienced full-stack developer with 4+ years building intelligent digital solutions using React, Next.js, Express.js, Deno, MongoDB, and AI technologies",
         isPartOf: {
-          "@id": "https://aieradev.vercel.app/#website",
+          "@id": "https://abdulkabirmusa.com/#website",
         },
         about: {
-          "@id": "https://aieradev.vercel.app/#person",
+          "@id": "https://abdulkabirmusa.com/#person",
         },
         datePublished: "2024-01-01",
-        dateModified: "2024-12-26",
+        dateModified: new Date().toISOString().split("T")[0],
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -66,21 +66,21 @@ export function StructuredData() {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://aieradev.vercel.app",
+              item: "https://abdulkabirmusa.com",
             },
           ],
         },
         mainEntity: {
-          "@id": "https://aieradev.vercel.app/#person",
+          "@id": "https://abdulkabirmusa.com/#person",
         },
       },
       {
         "@type": "ProfessionalService",
-        "@id": "https://aieradev.vercel.app/#service",
+        "@id": "https://abdulkabirmusa.com/#service",
         name: "Full-Stack Development Services",
         description: "Professional web development services specializing in React, Next.js, Express.js, Deno, MongoDB, Prisma ORM, and AI integrations",
         provider: {
-          "@id": "https://aieradev.vercel.app/#person",
+          "@id": "https://abdulkabirmusa.com/#person",
         },
         areaServed: "Worldwide",
         serviceType: ["Web Development", "Full-Stack Development", "AI Integration", "Database Design", "API Development", "Frontend Development", "Backend Development"],
