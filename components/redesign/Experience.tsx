@@ -5,6 +5,17 @@ import { ArrowRight } from "lucide-react";
 export function Experience() {
   const experienceData = [
     {
+      company: "micro1",
+      location: "Remote · Contract",
+      roles: [
+        {
+          title: "AI Training Expert – Software Engineering",
+          period: "Aug 2026 - Present",
+          description: "Contributing software engineering expertise to build reproducible evaluation environments that test frontier AI models against real-world engineering workflows — including debugging, version control, and CI/CD tooling. Work supports AI training and evaluation initiatives at micro1, an AI data lab partnering with leading AI labs and enterprises."
+        }
+      ]
+    },
+    {
       company: "Clypra",
       location: "Open Source · Remote",
       roles: [

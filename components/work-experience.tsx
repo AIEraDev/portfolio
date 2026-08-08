@@ -5,6 +5,19 @@ import { ChevronLeft, ChevronRight, MapPin, Calendar, Briefcase } from "lucide-r
 
 const experiences = [
   {
+    company: "micro1",
+    role: "AI Training Expert – Software Engineering",
+    duration: "Aug 2026 – Present",
+    location: "Remote (Contract)",
+    description: "Contributing software engineering expertise to build reproducible evaluation environments that test frontier AI models against real-world engineering workflows — including debugging, version control, and CI/CD tooling.",
+    achievements: [
+      "Building reproducible evaluation environments to benchmark frontier AI models on real-world engineering tasks",
+      "Designing test suites and workflows covering debugging, version control, and CI/CD tooling for AI training initiatives",
+      "Collaborating on model evaluation environments for micro1, an AI data lab partnering with leading AI labs"
+    ],
+    technologies: ["AI Model Evaluation", "RLHF", "Agentic Benchmarking", "CI/CD", "Git", "Python", "Docker"],
+  },
+  {
     company: "Sizemug",
     role: "Lead Frontend Developer",
     duration: "Nov 2024 – Oct 2025",
