@@ -46,12 +46,12 @@ const experiences = [
   },
   {
     company: "DeenMinder Ltd.",
-    role: "Mobile & Web Frontend Engineer",
-    duration: "Oct 2023 – Oct 2024",
+    role: "Chief Technology Officer",
+    duration: "Jan 2024 – Present",
     location: "Remote",
-    description: "Built and shipped DeenMinder's cross-platform Flutter app (prayer times, adhkar, Quran audio, alarms) and maintained web UIs (Next.js) including a prayer widget and admin dashboards.",
-    achievements: ["Implemented reliable background scheduling and cross-device notification handling", "Optimized audio streaming with caching/resume for low-bandwidth users", "Reduced cold-start and page load times by applying lazy-loading and code-splitting", "Improved audio reliability via player/stream fallback strategies", "Owned mobile & web CI/CD automation, crash reporting, and release artifacts"],
-    technologies: ["Flutter", "Next.js", "Audio Streaming", "CI/CD", "Mobile Development", "Background Services"],
+    description: "Leading technical strategy, cross-platform architecture (Flutter, Next.js), and product engineering for DeenMinder — an Islamic lifestyle platform uniting prayer times, Quran audio, Adhkar, and Qibla tracking.",
+    achievements: ["Overseeing full-stack architecture across Flutter mobile app and Next.js web applications", "Implemented reliable background scheduling and cross-device notification handling", "Optimized audio streaming with caching/resume for low-bandwidth users", "Reduced cold-start and page load times by applying lazy-loading and code-splitting", "Improved audio reliability via player/stream fallback strategies"],
+    technologies: ["Flutter", "React", "Next.js", "Dart", "Audio Streaming", "CI/CD", "Mobile & Web Architecture"],
   },
 ];
 

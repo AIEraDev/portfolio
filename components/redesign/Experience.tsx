@@ -58,14 +58,19 @@ export function Experience() {
       location: "United Kingdom · Remote",
       roles: [
         {
-          title: "Chief Technology Officer (CTO)",
+          title: "Chief Technology Officer",
           period: "Jan 2025 - Present",
-          description: "Leading technical architecture, product engineering, and cross-platform mobile and web infrastructure for DeenMinder."
+          description: "Deen Minder is a comprehensive Islamic lifestyle platform bringing together prayer times, Quran recitation, Adhkar tracking, Qibla finder, fasting alarms, and daily quizzes across mobile and web platforms."
         },
         {
-          title: "Web & Mobile Frontend Engineer",
-          period: "Jan 2024 - Dec 2024",
-          description: "Developed DeenMinder's responsive UIs, prayer tools, and cross-platform mobile & web applications."
+          title: "Web Frontend Engineer",
+          period: "Apr 2024 - Present",
+          description: "Developed DeenMinder's responsive web UIs and public site (prayer widget, blog, admin dashboards), optimized for RTL, audio playback, and discoverability."
+        },
+        {
+          title: "Mobile Frontend Engineer",
+          period: "Jan 2024 - Present",
+          description: "Contributed to developing and optimizing an Islamic app designed to support spiritual productivity, focusing on Flutter, Dart, API integrations, and audio streaming."
         }
       ]
     },
