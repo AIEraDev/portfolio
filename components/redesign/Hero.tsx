@@ -72,7 +72,7 @@ export function Hero() {
           )}
         >
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            AI Platform Engineer | Context-first product thinker.
+            CTO @ Deen Minder · Founder, AIEraDev · Open-source builder (Clypra, Wardyn, Stackkith)
           </p>
 
           <div className="flex flex-wrap gap-6 pt-8">

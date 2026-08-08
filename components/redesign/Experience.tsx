@@ -58,14 +58,14 @@ export function Experience() {
       location: "United Kingdom · Remote",
       roles: [
         {
-          title: "Web Frontend Engineer",
-          period: "Apr 2024 - Dec 2024",
-          description: "Developed DeenMinder's responsive UIs and public site (prayer widget, blog, admin dashboards), optimized for RTL, audio playback, and discoverability."
+          title: "Chief Technology Officer (CTO)",
+          period: "Jan 2025 - Present",
+          description: "Leading technical architecture, product engineering, and cross-platform mobile and web infrastructure for DeenMinder."
         },
         {
-          title: "Mobile Frontend Engineer",
+          title: "Web & Mobile Frontend Engineer",
           period: "Jan 2024 - Dec 2024",
-          description: "Contributed to developing and optimizing an Islamic app designed to support spiritual productivity. Focused on API integration and Dart development."
+          description: "Developed DeenMinder's responsive UIs, prayer tools, and cross-platform mobile & web applications."
         }
       ]
     },
